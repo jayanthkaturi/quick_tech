@@ -9,3 +9,4 @@
 9) Insert SSD into motherboard and connect to power supply. (Optional).
 10) Insert RAM and video/graphics cards into motherboard. Connect video/graphics cards to power supplies.
 11) Attach sound cards or any other cards to PCI ports as you wish.
+12) Network cards, RAID controllers to PCI express channels.
