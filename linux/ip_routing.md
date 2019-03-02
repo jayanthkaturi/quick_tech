@@ -1,4 +1,14 @@
-### Commads
+### Commands
+```bash
+ifconfig ## show interfaces on a host
+ifconfig [interface] up ## bring up an interface (eg. eth0)
+ifconfig [interface] down ## bring down an interface (eg. eth0)
+/etc/init.d/networking restart ## restart networking interfaces
+dhclient -r [interface (optional)] ## release ip address on interface
+dhclient [interface (optional)] ## get an ip address
+```
+
+### Routing Commads
 ```bash
 route -n ## show kernel routing table
 ip route ## or ip r
