@@ -1,3 +1,4 @@
+### rsync
 ```
 ## a -> preseve permissions, symlinks, times (modification, update) etc. and recursive (-t + -r)
 ## z -> compress
@@ -6,6 +7,7 @@
 rsync -az src/ username@host:/path/to/dst/
 ```
 
+### awk
 ```
 awk '/regex/ {print}' file_name
 
