@@ -1,6 +1,6 @@
 ```
 ## Using live USB
-## /dev/sda1 is the device (bootable USB)
+## /dev/sda1 is the host linux partition
 sudo mount /dev/sda1 /mnt/somefolder
 sudo mount --bind /dev /mnt/somefolder/dev
 sudo mount --bind /sys /mnt/somefolder/sys
