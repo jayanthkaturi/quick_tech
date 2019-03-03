@@ -4,7 +4,13 @@
 ## z -> compress
 ## u -> update, -u --delete -> update + delete files that are deleted in src/
 ## --exclude-files '/path/to/file_or_folder'
-rsync -az src/ username@host:/path/to/dst/
+rsync -auz src/ username@host:/path/to/dst/
+```
+
+### du - disk usage
+```bash
+## sort -h -> sort based on human redable strings
+du -sh .[!.*]* * <LOCATION> | sort -h
 ```
 
 ### awk
@@ -29,4 +35,7 @@ END {
 		print s[i];
 	}
 }'
+
+## sed example
+sed -n '/<regex>/g p' file.txt
 ```
