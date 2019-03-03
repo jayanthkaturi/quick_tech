@@ -13,6 +13,11 @@ rsync -auz src/ username@host:/path/to/dst/
 du -sh .[!.*]* * <LOCATION> | sort -h
 ```
 
+### PS1 - Bash
+```bash
+export PS1="\e\[1,33m\e\[4,33m\h | \u | \d | \t | \w\n>>"
+```
+
 ### awk
 ```
 awk '/regex/ {print}' file_name
