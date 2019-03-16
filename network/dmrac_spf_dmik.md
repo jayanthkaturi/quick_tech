@@ -13,4 +13,4 @@ adkim	  Alignment mode for DKIM	                  adkim=s
 aspf	  Alignment mode for SPF	                  aspf=r
 ```
 
-![DMRAC flow with SPF and DKIM](dmarc.jpg)
+![DMRAC flow with SPF and DKIM](DMARC_author-to-recipient_flow.jpg "DMRAC Flow")
