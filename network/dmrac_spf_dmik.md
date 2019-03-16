@@ -1,3 +1,5 @@
+### DMARC (Domain-based Message Authentication, Reporting and Conformance)
+
 ```
 DMRAC Record: "v=DMARC1;p=reject;pct=100;rua=mailto:postmaster@dmarcdomain.com"
 
