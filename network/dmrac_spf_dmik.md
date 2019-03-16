@@ -38,8 +38,8 @@ v=spf1 a mx ip4:69.64.153.131 include:_spf.google.com ~all
 ### DMARC (Domain-based Message Authentication, Reporting and Conformance)
 
 ```
-DMRAC Record: "v=DMARC1;p=reject;pct=100;rua=mailto:postmaster@dmarcdomain.com"
-
+DMARC policies are published in the DNS as text (TXT) resource records (RR) 
+Example: "v=DMARC1;p=reject;pct=100;rua=mailto:postmaster@dmarcdomain.com"
 
 Tag       Name	                                          Purpose Sample
 v         Protocol version	                          v=DMARC1
