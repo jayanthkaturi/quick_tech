@@ -12,3 +12,9 @@ net stop wuauserv
 net stop appidsvc
 net stop cryptsvc
 ```
+
+### svchost
+```cmd
+## Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
+sc create BITS binpath= “c:\windows\system32\svchost.exe -k netsvcs” start= delayed-auto
+```
