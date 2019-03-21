@@ -18,4 +18,5 @@ net stop cryptsvc
 ## sc create: Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
 ## svchost.exe -k netsvcs => start network related services (including windows update services)
 sc create BITS binpath= “c:\windows\system32\svchost.exe -k netsvcs” start= delayed-auto
+sc config w32tm type= own
 ```
