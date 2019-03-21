@@ -8,3 +8,17 @@ A dynamic multipoint virtual private network (DMVPN) is a secure network that ex
 Prepend AS (autonomous system) number/IP along the path to avoid loops in BGP protocol.
 RIP (Routing Information Protocol) limits 16 hops to avoid loops.
 ```
+
+### NAT Hairpinning
+```
+Access intra LAN end points through the public address of the gateway.
+
+Eg:
+Gateway address: 192.168.0.1
+Host 1: 192.168.0.5
+Host 2: 192.168.0.7
+The gateway has an external IP : 192.0.2.1
+Host 1 runs a P2P application P1 on its port 12345 which is externally mapped to 4444.
+Host 2 runs a P2P application P2 on its port 12345 which is externally mapped to 5555.
+If the NAT device supports hairpinning, then P1 application can connect to the P2 application using the external endpoint 192.0.2.1:5555. If not, the communication will not work.
+```
