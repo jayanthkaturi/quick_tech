@@ -1,3 +1,8 @@
+### Tips
+```
+1. Double space before command to not to add it to history.
+```
+
 ### rsync
 ```
 ## a -> preseve permissions, symlinks, times (modification, update) etc. and recursive (-t + -r)
