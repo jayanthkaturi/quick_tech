@@ -1,0 +1,2 @@
+- [Server Sent Events Node JS](https://medium.com/conectric-networks/a-look-at-server-sent-events-54a77f8d6ff7)
+- [Web Workers Node JS](https://blog.logrocket.com/node-js-multithreading-what-are-worker-threads-and-why-do-they-matter-48ab102f8b10)
