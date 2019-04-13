@@ -3,6 +3,8 @@
 1. Double space before command to not to add it to history.
 ```
 
+### procinfo, uptime, lshw
+
 ### lsof
 ```bash
 ## list open files
@@ -45,7 +47,7 @@ du -sh .[!.*]* * <LOCATION> | sort -h
 
 ### PS1 - Bash
 ```bash
-export PS1="\e\[1,33m\e\[4,33m\h | \u | \d | \t | \w\n>>"
+export PS1='\[\e[4;33m\]\[\e[1;33m\]\h | \u | \d | \t | \w\[\e[0m\]\n>> '
 ```
 
 ### awk
