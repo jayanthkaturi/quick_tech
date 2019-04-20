@@ -19,4 +19,14 @@ git branch --unset-upstream
 ## Update index
 git update-index --assume-unchanged <path_to_file>
 git update-index --no-assume-unchanged <path_to_file>
+
+## Cherry pick sequence of commits
+git cherry-pick A...B (cherry pick commits from A (excluded) to B)
+git cherry-pick A^...B (cherry pick commits from A (included) to B)
+
+## Git stashing
+git stash
+git stash clear | pop
+git stash push <path_to_file>
+git stash show <stash_number | stash{@1}>
 ```
