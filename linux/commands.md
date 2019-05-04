@@ -3,6 +3,9 @@
 1. Double space before command to not to add it to history.
 ```
 
+### update-alternatives
+sudo update-alternatives --config <double_tap_for_options>
+
 ### procinfo, uptime, lshw
 
 ### lsof
