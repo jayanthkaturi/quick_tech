@@ -5,8 +5,7 @@ Symmetric Multiprocessing: All processesors with their caches are connected to s
 
 Asymmetric Multiprocessing: Specific CPUs perform specific operations
 ```
-```
+
 ![asymm.gif](asymm.gif)
 
 ![symm.png](symm.png)
-```
