@@ -3,4 +3,4 @@
 - [STOF question](https://stackoverflow.com/questions/40283417/loading-outlook-vsto-add-in-from-the-native-com-add-in-on-startup)
 - [MS Regedit solution](https://blogs.msdn.microsoft.com/emeamsgdev/2017/08/02/outlooks-slow-add-ins-resiliency-logic-and-how-to-always-enable-slow-add-ins/)
 - [Use ngen.exe install <path_to_dll_file.dll>](https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator)
-- [Common Language Runtime (CLR)](https://docs.microsoft.com/en-us/dotnet/standard/clr)
+- [Common Language Runtime (CLR), loading time for this is calculated as plugin loading time causing delay sometimes](https://docs.microsoft.com/en-us/dotnet/standard/clr)
