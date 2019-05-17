@@ -1,3 +1,3 @@
-# Simple computer tips
+# Simple tech notes
 #### Index
 Coming soon...
