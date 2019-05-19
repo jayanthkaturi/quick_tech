@@ -22,16 +22,32 @@ Host 2: 192.168.0.7
 The gateway has an external IP : 192.0.2.1
 Host 1 runs a P2P application P1 on its port 12345 which is externally mapped to 4444.
 Host 2 runs a P2P application P2 on its port 12345 which is externally mapped to 5555.
-If the NAT device supports hairpinning, then P1 application can connect to the P2 application using the external endpoint 192.0.2.1:5555. If not, the communication will not work.
+If the NAT device supports hairpinning, then P1 application can connect to the P2 application
+using the external endpoint 192.0.2.1:5555. If not, the communication will not work.
 ```
 
 ### OOB (Out of Band Management)
 ```
-Managing network device through dedicated cable, not the input/output cable used by that device for regular purposes.
+Managing network device through dedicated cable, not the input/output cable used
+by that device for regular purposes.
 ```
 
 ### Split DNS
 ```
 Split Domain Name System (Split DNS) is an implementation in which separate DNS servers
 are provided for internal and external networks as a means of security and privacy management.
+```
+
+### NOC
+```
+A network operations center (NOC, pronounced like the word knock), also known as a
+"network management center", is one or more locations from which network monitoring
+and control, or network management, is exercised over a computer, telecommunication
+or satellite network.
+```
+
+### UEM
+```
+User environment management (also abbreviated to UEM) is the management of a computer
+user's experience within their desktop environment. 
 ```
