@@ -26,3 +26,6 @@ Using ALL inplace of /path/to/cmd1 is bad idea, restricting privilage is always 
 1. ```Defaults env_reset``` -> Resets the environment to run sudo commands
 2. ```Defaults mail_badpass``` -> Mail non sudo users attempting to run sudo commands
 3. ```Defaults secure_path``` -> $PATH to use while executing sudo commands, necessary for forbidding users to run their own scripts.
+
+### setuid
+```It does not run with the privileges of the user who launched it, but with that of the file owner instead.```
