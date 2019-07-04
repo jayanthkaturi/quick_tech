@@ -79,3 +79,13 @@ END {
 ## sed example
 sed -n '/<regex>/g p' file.txt
 ```
+
+## Read keys entered from keyboard
+```bash
+while true; do
+    read -rns1 input
+    if [ "$input" = "a" ]; then
+        echo 'a pressed'
+    fi
+done
+```
