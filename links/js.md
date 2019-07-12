@@ -4,3 +4,4 @@
 4. [JS Global Variables](https://2ality.com/2019/07/global-scope.html)
 5. [Accessability](https://www.telerik.com/blogs/web-accessibility-guidebook-for-developers)
 6. [How to: Tech Talk](https://overreacted.io/preparing-for-tech-talk-part-1-motivation/)
+7. [ReactJS Interview Questions](https://itnext.io/reactjs-interview-questions-for-senior-developers-64618f6a0aca)
