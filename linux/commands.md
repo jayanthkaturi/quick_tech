@@ -9,6 +9,7 @@ sudo update-alternatives --config <double_tap_for_options>
 ```
 
 ### procinfo, uptime, lshw
+### compgen - get all the available commands and grep over it
 
 ### lsof
 ```bash
