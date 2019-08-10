@@ -1,4 +1,3 @@
-```
 By default du reports the amount of disk space used by files/directories.
 If a file contains any data at all (even a single byte), it will occupy one
 block on the disk (which is typically 4k these days). One block cannot be shared between files.
@@ -30,4 +29,3 @@ $ du --apparent-size -h *
 ```
 
 Note that "total 12" refers to the total size, rounded up for block size: 8k + 4k = 12k
-```
