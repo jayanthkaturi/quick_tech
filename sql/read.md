@@ -1,0 +1,1 @@
+- [OPTIMIZE_FOR_SEQUENTIAL_VIEW](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888)
