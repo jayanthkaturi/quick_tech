@@ -1,0 +1,14 @@
+- You have win 10 sys
+- install linux as second OS on the system
+- reboot will boot to win 10 directly!
+- install [EasyBCD](https://neosmart.net/EasyBCD/) tool.
+- [Add linux to boot options](https://askubuntu.com/a/140376)
+- reboot and choose linux
+- run ```bash sudo grub-install /dev/sda ```, assuming sda is your harddisk
+  - if you don't know, run sudo fdisk -l and see beside which dev partition the * is.
+  - /dev/sda is the first internal hard drive, so it'll be /dev/sda most **caution** probably.
+- Rebooting should give grub.
+- If you select windows you'll see linux option again, cause we added it in the 4th step.
+  - To remove this, boot to windows
+  - remove linux entry created in step 5.
+- Be happy!
