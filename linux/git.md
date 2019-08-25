@@ -19,6 +19,7 @@ git branch --unset-upstream
 ## Update index
 git update-index --assume-unchanged <path_to_file>
 git update-index --no-assume-unchanged <path_to_file>
+git ls-files -v | grep "^[a-z]" ## get list of all assume-unchanged files
 
 ## Cherry pick sequence of commits
 git cherry-pick A...B (cherry pick commits from A (excluded) to B)
