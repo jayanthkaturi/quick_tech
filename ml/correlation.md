@@ -14,4 +14,11 @@ Point Biserial:
 Dichotomous variable categrical (one hot encode) and continous, calc pearson coeff
 
 
+Analysis of variance (ANOVA): 
+F = sum_var(between grps)/sum_var(with in grps), p -> confidence
+## F, p = stats.f_oneway(...)
+
+F(b,w) -> b,w are degrees of freedom across and within groups
+b = num grps - 1
+w = total observations - num grps
 ```
