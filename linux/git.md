@@ -30,4 +30,10 @@ git stash
 git stash clear | pop
 git stash push <path_to_file>
 git stash show <stash_number | stash{@1}>
+
+## Password less login
+ssh-keygen -t rsa -b 4096
+## add public key to github SSH And GPG keys section
+## ssh-copy-id -i ~/.ssh/mykey user@host
+git clone git@github.com:<username>/<repo>.git
 ```
