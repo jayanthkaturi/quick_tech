@@ -22,3 +22,5 @@ reader.result
 import base64
 data = base64.urlsafe_b64decode(data.split(',')[-1])
 ```
+
+### [Symbols](https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/)
