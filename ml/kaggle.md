@@ -35,9 +35,7 @@ for i,c in enumerate(cat, 1):
 plt.show()
 
 ## pair plots
-g = sns.pairplot(train[[u'Survived', u'Pclass', u'Sex', u'Age', u'Parch', u'Fare', u'Embarked',
-       u'FamilySize', u'Title']], hue='Survived', palette = 'seismic',size=1.2,diag_kind = 'kde',diag_kws=dict(shade=True),plot_kws=dict(s=10) )
-g.set(xticklabels=[])
+g = sns.pairplot(iris, hue="species", palette="husl", height=3, kind="reg", diag_kind="kde")
 
 ## continous
 ## log transformation
