@@ -1,4 +1,16 @@
 ```python
+"""
+Individually:
+msno.matrix
+plt.bar
+sns.countplot
+sns.distplot
+
+Pairs:
+sns.pairplot
+sns.heatmap
+"""
+
 import missingno as msno
 import seaborn as sns
 import matplot.pyplot as plt
