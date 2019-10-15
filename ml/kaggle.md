@@ -1,5 +1,8 @@
 ```python
 """
+Fill missing data
+Reduce/Process data set categories, log transform right skewed continous
+
 Individually:
 msno.matrix
 plt.bar
@@ -9,6 +12,10 @@ sns.distplot
 Pairs:
 sns.pairplot
 sns.heatmap
+
+LabelEncode or pd.get_dummies
+
+apply models, model = Model(**kwargs), model.fit(X,y), model.score(X,y).
 """
 
 import missingno as msno
