@@ -73,4 +73,7 @@ plt.show()
         2.5.2. One-Hot Encoding the Categorical Features
     2.6. Conclusion
 """
+
+## https://www.kaggle.com/gunesevitan/advanced-feature-engineering-tutorial-with-titanic
+## https://www.kaggle.com/arthurtok/introduction-to-ensembling-stacking-in-python
 ```
