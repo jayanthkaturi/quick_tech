@@ -14,6 +14,7 @@ Pairs:
 sns.pairplot(iris, hue="species", palette="husl", height=3, kind="reg", diag_kind="kde")
 sns.heatmap(df.corr(), cmap='coolwarm')
 sns.boxenplot(x='age_cat', y='bmi', data=df)
+sns.scatterplot(x='age', y='charges', hue='bmi_cat', data=df)
 
 LabelEncode or pd.get_dummies
 
