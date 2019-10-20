@@ -6,12 +6,14 @@ Reduce/Process data set categories, log transform right skewed continous
 Individually:
 msno.matrix
 plt.bar
-sns.countplot
-sns.distplot
+plt.pie(df.age_cat.value_counts(normalize=True).mul(100).rename('count').reset_index()['count'].values, labels=df.age_cat.unique())
+sns.countplot(x=c, hue='Survived', data=all_df)
+sns.distplot(df.age)
 
 Pairs:
-sns.pairplot
-sns.heatmap
+sns.pairplot(iris, hue="species", palette="husl", height=3, kind="reg", diag_kind="kde")
+sns.heatmap(df.corr(), cmap='coolwarm')
+sns.boxenplot(x='age_cat', y='bmi', data=df)
 
 LabelEncode or pd.get_dummies
 
