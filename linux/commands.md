@@ -3,6 +3,11 @@
 1. Double space before command to not to add it to history.
 ```
 
+### get group of process
+```bash
+ps -o user,group,rgroup,sgroup -p "${pid}"
+```
+
 ### update-alternatives
 ```bash
 sudo update-alternatives --config <double_tap_for_options>
