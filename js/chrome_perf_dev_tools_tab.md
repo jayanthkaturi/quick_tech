@@ -1,0 +1,6 @@
+* JS -> Style -> Layout -> Paint -> Composite ([Rendering Performance Doc](https://developers.google.com/web/fundamentals/performance/rendering))
+* [CSS properties and their triggers for above](https://csstriggers.com/)
+* [What forces layout reflow?](https://gist.github.com/paulirish/5d52fb081b3570c81e3a#file-what-forces-layout-md)
+* [Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part3#raster_and_composite_off_of_the_main_thread)
+* [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
+* [Example mem leak fix](https://www.youtube.com/watch?v=RJRbZdtKmxU)
