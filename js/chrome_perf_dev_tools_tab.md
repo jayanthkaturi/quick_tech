@@ -4,3 +4,4 @@
 * [Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part3#raster_and_composite_off_of_the_main_thread)
 * [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
 * [Example mem leak fix](https://www.youtube.com/watch?v=RJRbZdtKmxU)
+* [Web Dev Metrics (Chrome Perf tab)](https://web.dev/metrics/)
