@@ -1,0 +1,28 @@
+10 lessons from 35K tps
+I’ve spent the last 6 months on a contract designing and developing a high transaction database – a couple orders of magnitude higher than the average OLTP SQL Server database. The SLA specified a hard transaction duration and the primary fetch feature required some complex business logic. That level of concurrency drives out a few lessons. Some reinforced what I already believed and some lessons were a surprise.
+
+I’m under a strict NDA not to reveal the client or the industry, but I have permission to discuss some of the technology. Let me just say that if you live in the industrialized world, I’d bet $100 that your data has gone through this system at least once.
+
+Lesson 1: At 35K tps, it’s difficult to configure a stable test or production platform. We had more trouble just getting the servers stable than we did developing the code. A good system administrator who knows how to properly configure every component in the network, server, routers, SAN is worth their weight in gold. And at this tps, don’t try iSCSI.
+
+Lesson 2: We moved all the business logic into the database design and stored procedures to use set-based code. The middle tier was mostly a pass-through from the mainframe handling the manually partitioning and the connection pooling. The creative data-driven design allowed for flexibility and performed great.
+
+Lesson 3: I developed both a denormalized and normalized version of the schema and the stored procedures using the same API. The denormalized version violated first normal form and repeated columns (part1, part2, part3, part4). It seemed like a reasonable idea at the time because a single clustered seek could fetch all the data without any other reads and the number of parts was fixed. However, several other descriptive columns were added for each “part”. The amount of code required to normalize the parts inside the proc, and the extra indexes, cost the denormalized solution, the result was that the normalized version actually out performed the denormalized version by several precious milliseconds. ("Ah, my Precious" said Gollum)
+
+Lesson 4: When developing the upsert proc prior to tuning the indexes, I first trusted that the If Exists(Select…) line would fire for any item and would prohibit duplicates. Nada. In a short time there were thousands of duplicates because the same item would hit the upsert at the same millisecond and both transactions would see a not exists and perform the insert. After much testing the solution was to use the unique index, catch the error, and retry allowing the transaction to see the row and perform an update instead an insert.
+
+Lesson 5: This app requires that several hundred “items” are passed into the stored procedure for processing as a set. I chose to input the data as comma delimited VarChar(max), originally using Erland’s iterative string2set function to parse string into a set inside the proc. It worked well enough. The plan was to substitute a CLR function near the end of development. When the time came, the CLR function ran blazingly fast on my notebook, but under stress it was painfully sloooooow. I didn’t understand at all why. This is exactly what we were told by Microsoft the CLR was for. Pass string data in, manipulate it, pass it back – no data access – sounds great right? In a few emails to my friend Adam, he told me he had the same issues a while back and the CLR simply couldn't keep up with the marshalling of the VarChar(max).
+
+So back to the T-SQL function and time to make it faster. I switched to the Table of Numbers solution and found that with test data using many short strings (‘abc,qwe,wer,ert x9000) it out performed the iterative function by over 2x. But when double checking with our real data the iterative function ran faster by a magnitude. The reason was that our data has much longer strings, and the iterative solution quickly jumped to the next comma, cut the string and moved on.
+
+Lesson 6: Agile iterative development with unit testing is a blast! During the development I maintained two scripts: one that created the database, tables, and procs, and a second one with test data and unit test calls. During the crunch of development, I would grasp the next 10-15% of the user requirements (some of which were a bit complex) and then build out those requirements. When it passed the tests and the client could see that it was working we moved on to the next level of complexity – rip it up and rebuild better and stronger with the next iteration. But then as the rush of development ended and it moved into integration testing, I had to conform to source code control. A file for every proc is a good thing for IT control, but it sure slowed down my development.
+
+Lesson 7: At this transaction level the nonclustered indexes can get 97% fragmented in a day. Be very careful when choosing nonclustered indexes.
+
+Lesson 8: The code went through several rounds of fine tuning and searching for ways to reduce any millisecond possible. The overall distribution of my time was about ½ design and code, ¼ unit testing, and ¼ integration and performance testing/tuning.
+
+Lesson 9: Despite the best efforts to agree on an API between the middle tier and the database, little things like agreeing on the return codes and error handling, and formatting of dates were only discovered during integration testing.
+
+Lesson 10: At 35K tps ADO.Net connection pooling is harder than it sounds.
+
+So one day of knowledge transfer left on the contract. It’s about to go live and under a full production load it’s performing about 33% faster than required. The last thing to say about this project is that the folks were great to work with – I had a blast!
